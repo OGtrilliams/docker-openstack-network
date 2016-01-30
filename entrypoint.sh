@@ -20,7 +20,7 @@ sed -i "\
   s/^admin_password =.*/password = $NEUTRON_PASS/; \
   s/^# service_plugins.*/service_plugins = router/; \
   s/^# allow_overlapping_ips.*/allow_overlapping_ips = True/; \
-  s/^# allow_automatic_l3agent_failover.*/allow_automatic_l3agent_failover = True/;
+  s/^# allow_automatic_l3agent_failover.*/allow_automatic_l3agent_failover = True/; \
 " /etc/neutron/neutron.conf
 
 if [ $HA_MODE == "DVR" ]; then
